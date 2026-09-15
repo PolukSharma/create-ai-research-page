@@ -534,49 +534,19 @@
   background: var(--create-ai-wash);
 }
 
-.create-ai-contact-grid {
-  align-items: start;
-  display: grid;
-  gap: var(--create-ai-space-lg);
-  grid-template-columns: 1.4fr 0.8fr;
-}
-
 .create-ai-contact .create-ai-h2 {
   margin-bottom: var(--create-ai-space-md);
 }
 
 .create-ai-contact p {
+  font-family: var(--create-ai-font);
   margin: 0 0 var(--create-ai-space-sm);
+  max-width: 42rem;
 }
 
 .create-ai-contact-support {
   color: var(--create-ai-muted);
   font-size: 0.9rem;
-  margin: 0;
-  max-width: 42rem;
-}
-
-.create-ai-contact-links {
-  border-left: 1px solid var(--create-ai-line);
-  display: grid;
-  gap: 0.6rem;
-  list-style: none;
-  margin: 0;
-  padding: 0.25rem 0 0.25rem 1.5rem;
-}
-
-.create-ai-contact-links a {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.create-ai-contact-links a::after {
-  content: " →";
-}
-
-.create-ai-contact-links a:hover,
-.create-ai-contact-links a:focus-visible {
-  text-decoration: underline;
 }
 
 /* ---------- Motion / a11y ---------- */
@@ -595,19 +565,12 @@
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .create-ai-challenges,
-  .create-ai-contact-grid,
   .create-ai-steps {
     grid-template-columns: 1fr;
   }
 
   .create-ai-topics {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .create-ai-contact-links {
-    border-left: 0;
-    border-top: 1px solid var(--create-ai-line);
-    padding: 1.25rem 0 0;
   }
 
   .create-ai-steps::before {
