@@ -178,6 +178,7 @@
 
 /* ---------- Research areas ---------- */
 .create-ai-topics {
+  align-items: start;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
@@ -190,9 +191,32 @@
   background: var(--create-ai-white);
   border: 1px solid var(--create-ai-line);
   border-radius: var(--create-ai-radius);
+  transition: border-color 0.2s ease;
+}
+
+.create-ai-topic:hover,
+.create-ai-topic:has(details[open]) {
+  border-color: var(--create-ai-cardinal);
+}
+
+.create-ai-topic details {
+  margin: 0;
+}
+
+.create-ai-topic summary {
+  align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: 1.1rem 1rem 1rem;
+  list-style: none;
+  padding: 1.35rem 1rem 1rem;
+  position: relative;
+  text-align: center;
+  user-select: none;
+}
+
+.create-ai-topic summary::-webkit-details-marker {
+  display: none;
 }
 
 .create-ai-topic-icon {
@@ -200,40 +224,62 @@
   background: var(--create-ai-wash);
   border-radius: 50%;
   display: inline-flex;
-  height: 3rem;
+  height: 3.5rem;
   justify-content: center;
-  margin-bottom: 0.85rem;
-  width: 3rem;
+  margin-bottom: 0.9rem;
+  width: 3.5rem;
 }
 
 .create-ai-topic-icon svg {
   display: block;
-  height: 1.7rem;
-  width: 1.7rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .create-ai-topic h3 {
+  align-items: center;
+  display: flex;
   font-size: 1rem;
   line-height: 1.3;
-  margin: 0 0 0.45rem;
+  margin: 0 0 0.6rem;
+  min-height: 2.6em;
 }
 
-.create-ai-topic p {
+/* chevron */
+.create-ai-topic-toggle {
+  border-color: var(--create-ai-cardinal);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  display: block;
+  height: 0.5rem;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  width: 0.5rem;
+}
+
+.create-ai-topic details[open] .create-ai-topic-toggle {
+  transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.create-ai-topic-body {
+  border-top: 1px solid var(--create-ai-line);
+  margin: 0 1rem;
+  padding: 0.85rem 0 1rem;
+  text-align: center;
+}
+
+.create-ai-topic-body p {
   color: var(--create-ai-muted);
-  flex: 1 1 auto;
   font-size: 0.9rem;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.7rem;
 }
 
-.create-ai-topic .create-ai-topic-people {
-  color: var(--create-ai-muted);
-  flex: 0 0 auto;
+.create-ai-topic-body .create-ai-topic-people {
   font-size: 0.82rem;
   margin: 0;
 }
 
 .create-ai-topic a {
-  font-size: 0.82rem;
   font-weight: 600;
   text-decoration: none;
 }
@@ -533,7 +579,9 @@
 
 /* ---------- Motion / a11y ---------- */
 @media (prefers-reduced-motion: reduce) {
-  .create-ai-challenge {
+  .create-ai-challenge,
+  .create-ai-topic,
+  .create-ai-topic-toggle {
     transition: none;
   }
 
