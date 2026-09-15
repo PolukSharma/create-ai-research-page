@@ -58,26 +58,23 @@ The preview shell loads `wordpress/content-fragment.html` live — edit that fil
 
 ## Content map (what replaced the wall of text)
 
-The page is written for a general public audience: plain language, present tense, and every framing
-section links down to the researchers and publications that back it up.
+This is a subpage of create.usc.edu, so it stays AI-specific: no general CREATE background (the site's
+About page covers that). Plain language, present tense, and every framing section links down to the
+researchers and publications that back it up. The theme's page banner serves as the title; the fragment
+starts directly with the challenges.
 
-1. Hero — *Securing Critical Infrastructure in the Age of AI*, two short paragraphs, and three CREATE facts (20+ years, 8 fellows, 24 publications)  
-2. On this page — jump links to every section (anchors have `scroll-margin-top` for the sticky nav)  
-3. Three challenges — adversaries / defensive AI / reliability & control, each with an "In practice" example and researcher links  
-4. Research areas — eight concrete topics drawn from the fellows' work, each linking to the fellow  
-5. How we work — simulate → build decision tools → evaluate, using real artifacts (Disaster World, E-CAT, Game of Hidden Rules)  
-6. About CREATE — DHS Center of Excellence, USC Viterbi/ISI, national network  
-7. All 8 Research Fellows — short blurbs, challenge tags linking back up, full bios on expand  
-8. Full AI reference list — collapsed by default; all links retained (libproxy URLs normalized to public DOIs where possible)  
-9. Contact — email, related CREATE pages, one-line support note
+1. Three challenges — adversaries / defensive AI / reliability & control, each with an "In practice" example and researcher links  
+2. Research areas — eight concrete topics drawn from the fellows' work, each with an icon and a link to the fellow  
+3. How we work — simulate → build decision tools → evaluate, using real artifacts (Disaster World, E-CAT, Game of Hidden Rules)  
+4. All 8 Research Fellows — short blurbs, challenge tags linking back up, full bios on expand  
+5. Full AI reference list — collapsed by default; all links retained (libproxy URLs normalized to public DOIs where possible)  
+6. Contact — email, related CREATE pages, one-line support note
 
-Removed from the earlier draft: the IEA `$110B` stat (not CREATE's research), the "Distinctive contribution"
-section (merged into the hero), the interconnection diagram (generic; the point is now one sentence in the
-challenges lede), the "2028 Games" and "Los Angeles laboratory" tiles, and the philanthropy callout
-(now a single line in Contact).
+Removed from earlier drafts: the vision hero and IEA `$110B` stat, the "On this page" nav, the
+"Distinctive contribution" and "About CREATE" sections, the interconnection diagram, the "2028 Games" and
+"Los Angeles laboratory" tiles, and the philanthropy callout (now a single line in Contact).
 
-If facts change (fellow count, publication count), update the hero `create-ai-facts` block and the
-references `<summary>` count together.
+If the publication count changes, update the references `<summary>` count.
 
 ## Accessibility checklist
 
