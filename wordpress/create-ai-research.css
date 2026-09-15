@@ -52,6 +52,11 @@
   outline-offset: 2px;
 }
 
+/* Keep in-page anchors clear of the sticky site nav */
+.create-ai-page [id] {
+  scroll-margin-top: 6rem;
+}
+
 .create-ai-inner {
   margin: 0 auto;
   max-width: var(--create-ai-max);
@@ -123,10 +128,10 @@
 }
 
 .create-ai-hero-grid {
-  align-items: end;
+  align-items: center;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1.4fr 0.85fr;
+  gap: 2.5rem;
+  grid-template-columns: 1.5fr 0.8fr;
 }
 
 .create-ai-hero-title {
@@ -136,46 +141,91 @@
   letter-spacing: -0.01em;
   line-height: 1.15;
   margin: 0 0 1rem;
-  max-width: 16ch;
+  max-width: 18ch;
 }
 
 .create-ai-hero-text {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.12rem;
   margin: 0;
-  max-width: 38rem;
+  max-width: 36rem;
 }
 
-.create-ai-stat {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--create-ai-radius);
-  padding: 1.25rem 1.35rem;
-  backdrop-filter: blur(4px);
+.create-ai-hero-text-secondary {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1rem;
+  margin-top: 0.9rem;
 }
 
-.create-ai-stat-value {
-  display: block;
+.create-ai-facts {
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
+  display: grid;
+  gap: 1.1rem;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.create-ai-fact dt {
   font-family: var(--create-ai-display);
-  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 0.45rem;
+  margin: 0 0 0.2rem;
 }
 
-.create-ai-stat-label {
-  color: rgba(255, 255, 255, 0.85);
-  display: block;
-  font-size: 0.92rem;
+.create-ai-fact dd {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
   line-height: 1.4;
   margin: 0;
 }
 
-.create-ai-stat-source {
-  color: rgba(255, 255, 255, 0.55);
-  display: block;
-  font-size: 0.75rem;
-  margin-top: 0.75rem;
+/* ---------- On this page ---------- */
+.create-ai-toc {
+  background: var(--create-ai-wash);
+  border-bottom: 1px solid var(--create-ai-line);
+}
+
+.create-ai-toc-inner {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.create-ai-toc-label {
+  color: var(--create-ai-muted);
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.create-ai-toc-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.35rem 1.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.create-ai-toc-list a {
+  color: var(--create-ai-ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.create-ai-toc-list a:hover,
+.create-ai-toc-list a:focus-visible {
+  color: var(--create-ai-cardinal);
+  text-decoration: underline;
 }
 
 /* ---------- Challenge cards ---------- */
@@ -234,48 +284,86 @@
   width: 100%;
 }
 
-/* ---------- Cascade / interconnection ---------- */
-.create-ai-cascade-wrap {
-  background: var(--create-ai-wash);
-  border-radius: var(--create-ai-radius);
-  overflow: hidden;
-  padding: 1.5rem 1rem 1.25rem;
-}
-
-.create-ai-cascade-svg {
-  display: block;
-  margin: 0 auto;
-  max-width: 720px;
-  width: 100%;
-}
-
-.create-ai-cascade-svg .create-ai-node {
-  transition: transform 0.3s ease;
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-.create-ai-cascade-wrap:hover .create-ai-node {
-  transform: scale(1.04);
-}
-
-.create-ai-cascade-svg .create-ai-link {
-  stroke-dasharray: 4 4;
-  animation: create-ai-dash 18s linear infinite;
-}
-
-.create-ai-cascade-caption {
-  color: var(--create-ai-muted);
+.create-ai-challenge .create-ai-challenge-example {
+  border-top: 1px solid var(--create-ai-line);
+  color: var(--create-ai-ink);
   font-size: 0.9rem;
-  margin: 1rem auto 0;
-  max-width: 40rem;
-  text-align: center;
+  margin-top: 0.9rem;
+  padding-top: 0.85rem;
 }
 
-@keyframes create-ai-dash {
-  to {
-    stroke-dashoffset: -120;
-  }
+.create-ai-challenge-example strong {
+  color: var(--create-ai-cardinal);
+}
+
+.create-ai-challenge .create-ai-challenge-people {
+  font-size: 0.85rem;
+  margin-top: 0.7rem;
+}
+
+.create-ai-challenge-people span {
+  color: var(--create-ai-muted);
+  font-weight: 600;
+}
+
+.create-ai-challenge-people a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-ai-challenge-people a:hover,
+.create-ai-challenge-people a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ---------- Research areas ---------- */
+.create-ai-topics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.create-ai-topic {
+  background: var(--create-ai-white);
+  border: 1px solid var(--create-ai-line);
+  border-radius: var(--create-ai-radius);
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1rem 1rem;
+}
+
+.create-ai-topic h3 {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0 0 0.45rem;
+}
+
+.create-ai-topic p {
+  color: var(--create-ai-muted);
+  flex: 1 1 auto;
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.create-ai-topic .create-ai-topic-people {
+  color: var(--create-ai-muted);
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.create-ai-topic a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-ai-topic a:hover,
+.create-ai-topic a:focus-visible {
+  text-decoration: underline;
 }
 
 /* ---------- Capability strip ---------- */
@@ -334,30 +422,29 @@
   max-width: 18rem;
 }
 
-/* ---------- Why CREATE ---------- */
-.create-ai-why-grid {
+/* ---------- About CREATE ---------- */
+.create-ai-about-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.create-ai-why-item {
-  background: var(--create-ai-white);
-  border: 1px solid var(--create-ai-line);
+.create-ai-about-item {
+  background: var(--create-ai-wash);
   border-radius: var(--create-ai-radius);
-  padding: 1.15rem 1rem;
+  padding: 1.15rem 1.1rem;
 }
 
-.create-ai-why-item strong {
+.create-ai-about-item strong {
   color: var(--create-ai-cardinal);
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   margin-bottom: 0.35rem;
 }
 
-.create-ai-why-item p {
+.create-ai-about-item p {
   color: var(--create-ai-muted);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   margin: 0;
 }
 
@@ -484,6 +571,18 @@
   padding: 0.2rem 0.45rem;
 }
 
+.create-ai-page a.create-ai-tag-link {
+  background: var(--create-ai-cardinal);
+  color: var(--create-ai-white);
+  text-decoration: none;
+}
+
+.create-ai-page a.create-ai-tag-link:hover,
+.create-ai-page a.create-ai-tag-link:focus-visible {
+  background: var(--create-ai-cardinal-dark);
+  color: var(--create-ai-white);
+}
+
 /* ---------- References ---------- */
 .create-ai-refs details {
   background: var(--create-ai-wash);
@@ -534,23 +633,61 @@
   border-bottom: 0;
 }
 
+/* ---------- Contact ---------- */
+.create-ai-contact {
+  background: var(--create-ai-wash);
+}
+
+.create-ai-contact-grid {
+  align-items: start;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.4fr 0.8fr;
+}
+
+.create-ai-contact .create-ai-lede {
+  color: var(--create-ai-ink);
+  margin-bottom: 0.9rem;
+}
+
+.create-ai-contact-support {
+  color: var(--create-ai-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  max-width: 42rem;
+}
+
+.create-ai-contact-links {
+  border-left: 1px solid var(--create-ai-line);
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+}
+
+.create-ai-contact-links a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-ai-contact-links a::after {
+  content: " →";
+}
+
+.create-ai-contact-links a:hover,
+.create-ai-contact-links a:focus-visible {
+  text-decoration: underline;
+}
+
 /* ---------- Motion / a11y ---------- */
 @media (prefers-reduced-motion: reduce) {
-  .create-ai-challenge,
-  .create-ai-cascade-svg .create-ai-node {
+  .create-ai-challenge {
     transition: none;
   }
 
   .create-ai-challenge:hover {
     transform: none;
-  }
-
-  .create-ai-cascade-wrap:hover .create-ai-node {
-    transform: none;
-  }
-
-  .create-ai-cascade-svg .create-ai-link {
-    animation: none;
   }
 }
 
@@ -558,9 +695,28 @@
 @media (max-width: 900px) {
   .create-ai-hero-grid,
   .create-ai-challenges,
-  .create-ai-why-grid,
+  .create-ai-about-grid,
+  .create-ai-contact-grid,
   .create-ai-steps {
     grid-template-columns: 1fr;
+  }
+
+  .create-ai-topics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .create-ai-facts {
+    border-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+
+  .create-ai-contact-links {
+    border-left: 0;
+    border-top: 1px solid var(--create-ai-line);
+    padding: 1.25rem 0 0;
   }
 
   .create-ai-steps::before {
@@ -589,11 +745,20 @@
 }
 
 @media (max-width: 560px) {
-  .create-ai-person {
+  .create-ai-person,
+  .create-ai-topics {
+    grid-template-columns: 1fr;
+  }
+
+  .create-ai-facts {
     grid-template-columns: 1fr;
   }
 
   .create-ai-section {
     padding: 2.25rem 0;
+  }
+
+  .create-ai-hero {
+    padding: 2.5rem 0 2.75rem;
   }
 }

@@ -11,52 +11,63 @@
   <section class="create-ai-hero" aria-labelledby="create-ai-hero-title">
     <div class="create-ai-inner create-ai-hero-grid">
       <div>
-        <p class="create-ai-kicker">CREATE Research on Artificial Intelligence</p>
         <h2 id="create-ai-hero-title" class="create-ai-hero-title">Securing Critical Infrastructure in the Age of AI</h2>
         <p class="create-ai-hero-text">
-          For more than two decades, CREATE has helped the nation understand what threats to critical
-          infrastructure cost in lives, economic activity, and resilience. As AI moves into electric power,
-          transportation, water, communications, ports, and supply chains, CREATE is developing the evidence,
-          methods, and public-policy frameworks needed to deploy AI securely—and to prevent unacceptable
-          systemic consequences.
+          CREATE studies how to keep the nation’s critical infrastructure—power, water, transportation,
+          communications, ports, and supply chains—safe as artificial intelligence is built into it, and how
+          AI can help defend it.
+        </p>
+        <p class="create-ai-hero-text create-ai-hero-text-secondary">
+          For more than 20 years, CREATE has measured what disruptions to these systems cost in lives, dollars,
+          and recovery time. That evidence now guides where AI can be trusted, where a person must stay in the
+          loop, and how to keep a failure in one system from spreading to others.
         </p>
       </div>
-      <aside class="create-ai-stat" aria-label="Key statistic">
-        <span class="create-ai-stat-value">$110B</span>
-        <p class="create-ai-stat-label">
-          Potential annual savings for power plants from widespread use of existing AI applications—plus
-          175 GW of unlocked transmission capacity by 2035.
-        </p>
-        <span class="create-ai-stat-source">International Energy Agency estimate · Potential gains and AI failure risks remain largely unquantified</span>
-      </aside>
+      <dl class="create-ai-facts" aria-label="CREATE at a glance">
+        <div class="create-ai-fact">
+          <dt>20+ years</dt>
+          <dd>of risk and consequence analysis as a DHS Center of Excellence</dd>
+        </div>
+        <div class="create-ai-fact">
+          <dt>8 fellows</dt>
+          <dd>in engineering, computer science, psychology, and public policy</dd>
+        </div>
+        <div class="create-ai-fact">
+          <dt>24 publications</dt>
+          <dd>on AI, risk, and infrastructure resilience</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
-  <!-- Distinctive contribution -->
-  <section class="create-ai-section" aria-labelledby="create-ai-distinctive">
-    <div class="create-ai-inner">
-      <p class="create-ai-kicker">Distinctive contribution</p>
-      <h2 id="create-ai-distinctive" class="create-ai-h2">Consequence-informed AI security and resilience</h2>
-      <p class="create-ai-lede">
-        CREATE connects decisions about AI deployment, defense, autonomy, and human oversight to quantitative
-        models of societal and economic consequence—assessing whether AI can perform safely, how adversaries
-        might exploit it, and where AI-enabled defenses can reduce risk.
-      </p>
+  <!-- On this page -->
+  <nav class="create-ai-toc" aria-label="On this page">
+    <div class="create-ai-inner create-ai-toc-inner">
+      <span class="create-ai-toc-label">On this page</span>
+      <ul class="create-ai-toc-list">
+        <li><a href="#create-ai-challenges">Three challenges</a></li>
+        <li><a href="#create-ai-topics">Research areas</a></li>
+        <li><a href="#create-ai-approach">How we work</a></li>
+        <li><a href="#create-ai-about">About CREATE</a></li>
+        <li><a href="#create-ai-people">Researchers</a></li>
+        <li><a href="#create-ai-refs">Publications</a></li>
+        <li><a href="#create-ai-contact">Contact</a></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
   <!-- Three challenges -->
-  <section class="create-ai-section" aria-labelledby="create-ai-challenges-title" style="padding-top:0;">
+  <section id="create-ai-challenges" class="create-ai-section" aria-labelledby="create-ai-challenges-title">
     <div class="create-ai-inner">
-      <p class="create-ai-kicker">Integrated research agenda</p>
+      <p class="create-ai-kicker">The problem</p>
       <h2 id="create-ai-challenges-title" class="create-ai-h2">Three interrelated challenges</h2>
       <p class="create-ai-lede">
-        Protecting infrastructure from AI-enabled attack, using AI defensively, and keeping embedded AI
-        reliable and controllable—treated together because infrastructure systems are interconnected.
+        Infrastructure systems depend on one another, so a failure in one can spread to the rest. CREATE
+        works on these three challenges together for that reason.
       </p>
 
       <div class="create-ai-challenges">
-        <article class="create-ai-challenge">
+        <article id="create-ai-challenge-1" class="create-ai-challenge">
           <span class="create-ai-challenge-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="6" y="10" width="36" height="28" rx="2" stroke="#990000" stroke-width="2"/>
@@ -68,12 +79,23 @@
           <span class="create-ai-challenge-num">Challenge 01</span>
           <h3>Defend against AI-enabled adversaries</h3>
           <p>
-            Protect infrastructure from adversaries who use AI to discover vulnerabilities, evade defenses,
-            manipulate operational data, or coordinate cyber-physical attacks.
+            Attackers can use AI to find weaknesses, evade detection, tamper with operating data, or coordinate
+            attacks on both the digital and physical parts of a system.
+          </p>
+          <p class="create-ai-challenge-example">
+            <strong>In practice:</strong> game-theory algorithms that place limited security resources against
+            adversaries who adapt; risk methods borrowed from nuclear safety to secure systems built on large
+            language models.
+          </p>
+          <p class="create-ai-challenge-people">
+            <span>Researchers:</span>
+            <a href="#create-ai-person-john">Richard John</a>,
+            <a href="#create-ai-person-bier">Vicki Bier</a>,
+            <a href="#create-ai-person-zhuang">Jun Zhuang</a>
           </p>
         </article>
 
-        <article class="create-ai-challenge">
+        <article id="create-ai-challenge-2" class="create-ai-challenge">
           <span class="create-ai-challenge-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 8l14 8v10c0 9-6.5 14.5-14 16-7.5-1.5-14-7-14-16V16l14-8z" stroke="#990000" stroke-width="2" stroke-linejoin="round"/>
@@ -83,12 +105,23 @@
           <span class="create-ai-challenge-num">Challenge 02</span>
           <h3>Use AI defensively</h3>
           <p>
-            Detect intrusions, anticipate equipment failures, and support response to wildfire, extreme
-            weather, and other hazards before essential services are lost.
+            AI can spot intrusions, predict equipment failures, and help responders act during wildfire,
+            extreme weather, and other emergencies before essential services are lost.
+          </p>
+          <p class="create-ai-challenge-example">
+            <strong>In practice:</strong> machine learning that reroutes power to lower wildfire risk;
+            reinforcement-learning agents that defend cyber systems and guide search and rescue; virtual
+            training for emergencies inside buildings.
+          </p>
+          <p class="create-ai-challenge-people">
+            <span>Researchers:</span>
+            <a href="#create-ai-person-dilkina">Bistra Dilkina</a>,
+            <a href="#create-ai-person-chatterjee">Samrat Chatterjee</a>,
+            <a href="#create-ai-person-becerik-gerber">Burçin Becerik-Gerber</a>
           </p>
         </article>
 
-        <article class="create-ai-challenge">
+        <article id="create-ai-challenge-3" class="create-ai-challenge">
           <span class="create-ai-challenge-icon" aria-hidden="true">
             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="14" stroke="#990000" stroke-width="2"/>
@@ -99,166 +132,171 @@
           <span class="create-ai-challenge-num">Challenge 03</span>
           <h3>Keep embedded AI reliable and controllable</h3>
           <p>
-            Ensure AI embedded in infrastructure remains trustworthy, resistant to manipulation, and bounded
-            by clear thresholds for human intervention and autonomous action.
+            AI that runs inside infrastructure must stay trustworthy, resist manipulation, and have clear limits
+            on what it may do without a person’s approval.
+          </p>
+          <p class="create-ai-challenge-example">
+            <strong>In practice:</strong> benchmarks that compare how humans and machines learn; models of how
+            connected networks should adapt under disruption; tools that estimate the economic cost when systems
+            fail.
+          </p>
+          <p class="create-ai-challenge-people">
+            <span>Researchers:</span>
+            <a href="#create-ai-person-bier">Vicki Bier</a>,
+            <a href="#create-ai-person-savla">Ketan Savla</a>,
+            <a href="#create-ai-person-rose">Adam Rose</a>
           </p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- Interconnection -->
-  <section class="create-ai-section" aria-labelledby="create-ai-cascade-title">
+  <!-- Research areas -->
+  <section id="create-ai-topics" class="create-ai-section" aria-labelledby="create-ai-topics-title">
     <div class="create-ai-inner">
-      <p class="create-ai-kicker">Systems view</p>
-      <h2 id="create-ai-cascade-title" class="create-ai-h2">Why interconnection matters</h2>
+      <p class="create-ai-kicker">Research areas</p>
+      <h2 id="create-ai-topics-title" class="create-ai-h2">Where AI meets infrastructure</h2>
       <p class="create-ai-lede">
-        An attack, compromised AI agent, or physical disruption in one network can propagate across others.
-        CREATE studies how cascading failures spread—and how they can be detected, isolated, and contained.
+        CREATE’s AI work covers the physical systems people depend on and the human decisions made around them.
       </p>
 
-      <div class="create-ai-cascade-wrap">
-        <svg class="create-ai-cascade-svg" viewBox="0 0 720 320" role="img" aria-labelledby="create-ai-cascade-svg-title create-ai-cascade-svg-desc">
-          <title id="create-ai-cascade-svg-title">Interconnected critical infrastructure sectors</title>
-          <desc id="create-ai-cascade-svg-desc">Diagram showing electric power at the center linked to transportation, water, communications, ports, and supply chains, illustrating cascading risk.</desc>
-
-          <!-- links -->
-          <g fill="none" stroke="#c4b8b0" stroke-width="1.5" class="create-ai-link-group">
-            <line class="create-ai-link" x1="360" y1="160" x2="160" y2="70"/>
-            <line class="create-ai-link" x1="360" y1="160" x2="560" y2="70"/>
-            <line class="create-ai-link" x1="360" y1="160" x2="120" y2="220"/>
-            <line class="create-ai-link" x1="360" y1="160" x2="600" y2="220"/>
-            <line class="create-ai-link" x1="360" y1="160" x2="360" y2="280"/>
-            <line class="create-ai-link" x1="160" y1="70" x2="560" y2="70" opacity="0.45"/>
-            <line class="create-ai-link" x1="120" y1="220" x2="360" y2="280" opacity="0.45"/>
-            <line class="create-ai-link" x1="600" y1="220" x2="360" y2="280" opacity="0.45"/>
-          </g>
-
-          <!-- center: power -->
-          <g class="create-ai-node">
-            <circle cx="360" cy="160" r="52" fill="#990000"/>
-            <text x="360" y="154" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="13" font-weight="700">Electric</text>
-            <text x="360" y="172" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="13" font-weight="700">Power</text>
-          </g>
-
-          <!-- satellites -->
-          <g class="create-ai-node">
-            <rect x="88" y="42" width="144" height="56" rx="4" fill="#efeae6" stroke="#990000" stroke-width="1.5"/>
-            <text x="160" y="75" text-anchor="middle" fill="#1a1a1a" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">Transportation</text>
-          </g>
-          <g class="create-ai-node">
-            <rect x="488" y="42" width="144" height="56" rx="4" fill="#efeae6" stroke="#990000" stroke-width="1.5"/>
-            <text x="560" y="75" text-anchor="middle" fill="#1a1a1a" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">Communications</text>
-          </g>
-          <g class="create-ai-node">
-            <rect x="48" y="192" width="144" height="56" rx="4" fill="#efeae6" stroke="#990000" stroke-width="1.5"/>
-            <text x="120" y="225" text-anchor="middle" fill="#1a1a1a" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">Water</text>
-          </g>
-          <g class="create-ai-node">
-            <rect x="528" y="192" width="144" height="56" rx="4" fill="#efeae6" stroke="#990000" stroke-width="1.5"/>
-            <text x="600" y="225" text-anchor="middle" fill="#1a1a1a" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">Ports</text>
-          </g>
-          <g class="create-ai-node">
-            <rect x="288" y="252" width="144" height="56" rx="4" fill="#efeae6" stroke="#990000" stroke-width="1.5"/>
-            <text x="360" y="285" text-anchor="middle" fill="#1a1a1a" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700">Supply Chains</text>
-          </g>
-        </svg>
-        <p class="create-ai-cascade-caption">
-          Cascading risk across interdependent sectors—and the AI systems increasingly embedded in each.
-        </p>
-      </div>
+      <ul class="create-ai-topics">
+        <li class="create-ai-topic">
+          <h3>Power grids and wildfire</h3>
+          <p>Using machine learning to decide which transmission lines to switch off when fire risk is high.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-dilkina">Bistra Dilkina</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>Cyber defense of control systems</h3>
+          <p>Training reinforcement-learning agents to protect the computers that run energy and other infrastructure.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-chatterjee">Samrat Chatterjee</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>Buildings and emergency response</h3>
+          <p>AI, simulation, and virtual reality to prepare for evacuations, active threats, and extreme events.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-becerik-gerber">Burçin Becerik-Gerber</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>How people behave in disasters</h3>
+          <p>Simulating how populations respond to hurricane warnings so plans reflect real behavior, not assumptions.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-john">Richard John</a> · <a href="#create-ai-person-dilkina">Bistra Dilkina</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>Security against adaptive adversaries</h3>
+          <p>Deciding where to put limited defenses when attackers learn and change tactics.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-john">Richard John</a> · <a href="#create-ai-person-zhuang">Jun Zhuang</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>Economic consequences and supply chains</h3>
+          <p>Estimating what disasters cost and how quickly supply chains can recover.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-rose">Adam Rose</a> · <a href="#create-ai-person-chatterjee">Samrat Chatterjee</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>Safe and trustworthy AI</h3>
+          <p>Comparing human and machine learning, and adapting nuclear-safety methods to large language models.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-bier">Vicki Bier</a></p>
+        </li>
+        <li class="create-ai-topic">
+          <h3>Adapting interconnected networks</h3>
+          <p>How connected systems should adjust under disruption, and how to nudge individual choices toward the common good.</p>
+          <p class="create-ai-topic-people"><a href="#create-ai-person-savla">Ketan Savla</a></p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <!-- Capability -->
-  <section class="create-ai-section" aria-labelledby="create-ai-capability-title">
+  <!-- How we work -->
+  <section id="create-ai-approach" class="create-ai-section" aria-labelledby="create-ai-approach-title">
     <div class="create-ai-inner">
-      <p class="create-ai-kicker">From research to national capability</p>
-      <h2 id="create-ai-capability-title" class="create-ai-h2">Testing AI before it is entrusted with critical infrastructure</h2>
+      <p class="create-ai-kicker">Our approach</p>
+      <h2 id="create-ai-approach-title" class="create-ai-h2">From models and testbeds to decisions</h2>
       <p class="create-ai-lede">
-        CREATE will turn this research into an independent capability for evaluating AI under realistic stress—
-        so operators and regulators can decide where AI can be deployed, what authority it should receive, and
-        when human intervention must be retained.
+        CREATE researchers build simulations, decision tools, and evaluation methods that show how AI performs
+        under stress before it is trusted with essential services.
       </p>
 
       <ol class="create-ai-steps">
         <li class="create-ai-step">
           <span class="create-ai-step-marker" aria-hidden="true">1</span>
           <div>
-            <h3>Simulations &amp; testbeds</h3>
-            <p>Reproduce AI-enabled attacks, equipment failures, extreme-weather events, and cascading disruptions at infrastructure scale.</p>
+            <h3>Simulate</h3>
+            <p>Agent-based models such as Disaster World reproduce how populations respond to hurricanes; virtual-reality environments test emergency response in buildings; grid models test wildfire-risk switching.</p>
           </div>
         </li>
         <li class="create-ai-step">
           <span class="create-ai-step-marker" aria-hidden="true">2</span>
           <div>
-            <h3>Government &amp; industry demos</h3>
-            <p>Work with partners to show whether AI-enabled defenses can detect and contain failures before essential services are lost.</p>
+            <h3>Build decision tools</h3>
+            <p>The Economic Consequence Analysis Tool (E-CAT) estimates disaster losses; security-game algorithms allocate limited defenses; reinforcement-learning agents defend cyber systems.</p>
           </div>
         </li>
         <li class="create-ai-step">
           <span class="create-ai-step-marker" aria-hidden="true">3</span>
           <div>
-            <h3>Practical evaluation methods</h3>
-            <p>Give operators and regulators clear criteria for deployment authority, oversight, and human-in-the-loop thresholds.</p>
+            <h3>Evaluate</h3>
+            <p>The Game of Hidden Rules benchmarks machine learning against human learning; risk methods developed for nuclear safety are adapted to systems built on large language models.</p>
           </div>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- Why CREATE -->
-  <section class="create-ai-section" aria-labelledby="create-ai-why-title">
-    <div class="create-ai-inner">
-      <p class="create-ai-kicker">Why CREATE &amp; USC</p>
-      <h2 id="create-ai-why-title" class="create-ai-h2">A rare foundation for consequence-informed AI</h2>
-      <p class="create-ai-lede">
-        CREATE translates complex technical threats into economic and policy tools for government—now extending
-        that mission to AI in critical systems.
-      </p>
-
-      <div class="create-ai-why-grid">
-        <div class="create-ai-why-item">
-          <strong>DHS Center of Excellence</strong>
-          <p>The nation’s first university Center of Excellence, with more than two decades of risk and consequence analysis.</p>
-        </div>
-        <div class="create-ai-why-item">
-          <strong>ISI &amp; Viterbi</strong>
-          <p>USC strengths in artificial intelligence, cybersecurity, and cyber-physical systems.</p>
-        </div>
-        <div class="create-ai-why-item">
-          <strong>Los Angeles laboratory</strong>
-          <p>Wildfire, extreme weather, infrastructure interdependence, and emerging technologies converge here.</p>
-        </div>
-        <div class="create-ai-why-item">
-          <strong>2028 Games horizon</strong>
-          <p>A timely test of resilience under extraordinary demand, security, and continuity requirements.</p>
-        </div>
-      </div>
 
       <div class="create-ai-note">
         <p>
-          Sustained philanthropy would keep this capability independent and focused on public consequence rather
-          than product cycles or individual grants—helping ensure AI strengthens the critical systems society depends on.
+          The goal is practical criteria for operators and regulators: where AI can be deployed, how much
+          authority it should have, and when a person must remain in the loop.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- About CREATE -->
+  <section id="create-ai-about" class="create-ai-section" aria-labelledby="create-ai-about-title">
+    <div class="create-ai-inner">
+      <p class="create-ai-kicker">Who we are</p>
+      <h2 id="create-ai-about-title" class="create-ai-h2">About CREATE</h2>
+      <p class="create-ai-lede">
+        CREATE is a research center at the University of Southern California and the nation’s first
+        university-based Department of Homeland Security Center of Excellence. For more than two decades it has
+        translated complex threats into the economic and policy evidence government needs.
+      </p>
+
+      <div class="create-ai-about-grid">
+        <div class="create-ai-about-item">
+          <strong>DHS Center of Excellence</strong>
+          <p>More than 20 years of risk and consequence analysis for the U.S. Department of Homeland Security.</p>
+        </div>
+        <div class="create-ai-about-item">
+          <strong>USC Viterbi and ISI</strong>
+          <p>
+            USC’s Viterbi School of Engineering and Information Sciences Institute (ISI) bring depth in AI,
+            cybersecurity, and cyber-physical systems—systems where software controls physical equipment.
+          </p>
+        </div>
+        <div class="create-ai-about-item">
+          <strong>A national network</strong>
+          <p>
+            Fellows at USC, Pacific Northwest National Laboratory, and the University of Wisconsin–Madison, spanning
+            engineering, computer science, psychology, and public policy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Researchers -->
-  <section class="create-ai-section" aria-labelledby="create-ai-people-title">
+  <section id="create-ai-people" class="create-ai-section" aria-labelledby="create-ai-people-title">
     <div class="create-ai-inner">
       <p class="create-ai-kicker">Research community</p>
       <h2 id="create-ai-people-title" class="create-ai-h2">CREATE AI Research Fellows</h2>
 
       <div class="create-ai-people">
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-becerik-gerber" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">BB</div>
           <div>
             <h3>Burçin Becerik-Gerber</h3>
             <p class="create-ai-role">Professor &amp; Chair, Civil &amp; Environmental Engineering · USC</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-2">Challenge 02</a>
               <span class="create-ai-tag">Built environments</span>
               <span class="create-ai-tag">Emergency response</span>
               <span class="create-ai-tag">Human-centered AI</span>
@@ -283,12 +321,13 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-dilkina" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">BD</div>
           <div>
             <h3>Bistra Dilkina</h3>
             <p class="create-ai-role">Associate Professor, Computer Science &amp; ISE · Co-Director, CAIS · USC</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-2">Challenge 02</a>
               <span class="create-ai-tag">Optimization</span>
               <span class="create-ai-tag">Machine learning</span>
               <span class="create-ai-tag">Sustainability</span>
@@ -311,12 +350,13 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-john" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">RJ</div>
           <div>
             <h3>Richard John</h3>
             <p class="create-ai-role">Professor of Psychology · Senior Research Fellow · USC</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-1">Challenge 01</a>
               <span class="create-ai-tag">Security games</span>
               <span class="create-ai-tag">Behavioral models</span>
               <span class="create-ai-tag">Resource allocation</span>
@@ -343,12 +383,13 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-savla" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">KS</div>
           <div>
             <h3>Ketan Savla</h3>
             <p class="create-ai-role">Associate Professor, Civil &amp; Environmental Engineering · USC</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-3">Challenge 03</a>
               <span class="create-ai-tag">Network resilience</span>
               <span class="create-ai-tag">Adaptation</span>
               <span class="create-ai-tag">Peer influence</span>
@@ -371,12 +412,13 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-chatterjee" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">SC</div>
           <div>
             <h3>Samrat Chatterjee</h3>
             <p class="create-ai-role">Chief Data Scientist · Pacific Northwest National Laboratory</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-2">Challenge 02</a>
               <span class="create-ai-tag">Critical infrastructure</span>
               <span class="create-ai-tag">RL agents</span>
               <span class="create-ai-tag">Cyber-physical</span>
@@ -401,12 +443,14 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-bier" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">VB</div>
           <div>
             <h3>Vicki Bier</h3>
             <p class="create-ai-role">Professor Emeritus · University of Wisconsin–Madison</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-1">Challenge 01</a>
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-3">Challenge 03</a>
               <span class="create-ai-tag">AI safety</span>
               <span class="create-ai-tag">Human/AI learning</span>
               <span class="create-ai-tag">LLM security</span>
@@ -431,12 +475,13 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-zhuang" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">JZ</div>
           <div>
             <h3>Jun Zhuang</h3>
             <p class="create-ai-role">Morton C. Frank Professor of Industrial &amp; Systems Engineering</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-1">Challenge 01</a>
               <span class="create-ai-tag">Homeland security</span>
               <span class="create-ai-tag">Disaster management</span>
               <span class="create-ai-tag">Agentic AI</span>
@@ -462,12 +507,13 @@
           </div>
         </article>
 
-        <article class="create-ai-person">
+        <article id="create-ai-person-rose" class="create-ai-person">
           <div class="create-ai-avatar" aria-hidden="true">AR</div>
           <div>
             <h3>Adam Rose</h3>
             <p class="create-ai-role">Research Professor · CREATE Director Emeritus · USC</p>
             <div class="create-ai-tags">
+              <a class="create-ai-tag create-ai-tag-link" href="#create-ai-challenge-3">Challenge 03</a>
               <span class="create-ai-tag">Economic consequence</span>
               <span class="create-ai-tag">Resilience</span>
               <span class="create-ai-tag">Supply chains</span>
@@ -498,7 +544,7 @@
   </section>
 
   <!-- References -->
-  <section class="create-ai-section create-ai-refs" aria-labelledby="create-ai-refs-title">
+  <section id="create-ai-refs" class="create-ai-section create-ai-refs" aria-labelledby="create-ai-refs-title">
     <div class="create-ai-inner">
       <p class="create-ai-kicker">Bibliography</p>
       <h2 id="create-ai-refs-title" class="create-ai-h2">AI References</h2>
@@ -531,6 +577,30 @@
           <li>Zhu, Y., Savla, K. (2022). Information Design in Non-atomic Routing Games with Partial Participation: Computation and Properties. <em>IEEE Transactions on Control of Network Systems, 9</em>(2). <a href="https://ieeexplore.ieee.org/document/9749902" target="_blank" rel="noopener noreferrer">Link</a></li>
         </ul>
       </details>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="create-ai-contact" class="create-ai-section create-ai-contact" aria-labelledby="create-ai-contact-title">
+    <div class="create-ai-inner create-ai-contact-grid">
+      <div>
+        <p class="create-ai-kicker">Get in touch</p>
+        <h2 id="create-ai-contact-title" class="create-ai-h2">Work with CREATE</h2>
+        <p class="create-ai-lede">
+          Government agencies, infrastructure operators, industry partners, and journalists can reach CREATE at
+          <a href="mailto:rwhall@usc.edu">rwhall@usc.edu</a>.
+        </p>
+        <p class="create-ai-contact-support">
+          CREATE’s AI research is sustained by federal research funding and philanthropy. To support this work,
+          <a href="mailto:rwhall@usc.edu">contact us</a>.
+        </p>
+      </div>
+      <ul class="create-ai-contact-links" aria-label="Related pages">
+        <li><a href="https://create.usc.edu/research/">All CREATE research</a></li>
+        <li><a href="https://create.usc.edu/rd-transition/">R&amp;D transition to practice</a></li>
+        <li><a href="https://create.usc.edu/about/">About CREATE</a></li>
+        <li><a href="https://create.usc.edu/media/">News and media</a></li>
+      </ul>
     </div>
   </section>
 
