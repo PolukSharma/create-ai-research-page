@@ -1,0 +1,599 @@
+/* CREATE AI Research — scoped styles (prefix: create-ai-)
+   Safe to load alongside the CREATE WordPress theme. */
+
+.create-ai-page {
+  --create-ai-cardinal: #990000;
+  --create-ai-cardinal-dark: #7a0000;
+  --create-ai-ink: #1a1a1a;
+  --create-ai-muted: #5c5c5c;
+  --create-ai-line: #e2e2e2;
+  --create-ai-wash: #f6f4f2;
+  --create-ai-wash-2: #efeae6;
+  --create-ai-white: #ffffff;
+  --create-ai-stat: #2c2c2c;
+  --create-ai-max: 1100px;
+  --create-ai-radius: 4px;
+  --create-ai-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --create-ai-display: "Georgia", "Times New Roman", Times, serif;
+
+  box-sizing: border-box;
+  color: var(--create-ai-ink);
+  font-family: var(--create-ai-font);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 100%;
+}
+
+.create-ai-page *,
+.create-ai-page *::before,
+.create-ai-page *::after {
+  box-sizing: border-box;
+}
+
+.create-ai-page img,
+.create-ai-page svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.create-ai-page a {
+  color: var(--create-ai-cardinal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.create-ai-page a:hover,
+.create-ai-page a:focus-visible {
+  color: var(--create-ai-cardinal-dark);
+}
+
+.create-ai-page :focus-visible {
+  outline: 2px solid var(--create-ai-cardinal);
+  outline-offset: 2px;
+}
+
+.create-ai-inner {
+  margin: 0 auto;
+  max-width: var(--create-ai-max);
+  padding: 0 1.25rem;
+}
+
+.create-ai-section {
+  padding: 3rem 0;
+}
+
+.create-ai-section + .create-ai-section {
+  border-top: 1px solid var(--create-ai-line);
+}
+
+.create-ai-kicker {
+  color: var(--create-ai-cardinal);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.65rem;
+  text-transform: uppercase;
+}
+
+.create-ai-h2 {
+  font-family: var(--create-ai-display);
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+.create-ai-lede {
+  color: var(--create-ai-muted);
+  font-size: 1.05rem;
+  margin: 0 0 1.75rem;
+  max-width: 42rem;
+}
+
+/* ---------- Hero ---------- */
+.create-ai-hero {
+  background:
+    linear-gradient(135deg, rgba(26, 26, 26, 0.88) 0%, rgba(26, 26, 26, 0.72) 48%, rgba(153, 0, 0, 0.55) 100%),
+    radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.08), transparent 55%),
+    repeating-linear-gradient(
+      -12deg,
+      rgba(255, 255, 255, 0.03) 0 2px,
+      transparent 2px 14px
+    ),
+    #2a2a2a;
+  color: var(--create-ai-white);
+  padding: 3.25rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.create-ai-hero::after {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  content: "";
+  height: 1px;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.create-ai-hero .create-ai-kicker {
+  color: #f0c7c7;
+}
+
+.create-ai-hero-grid {
+  align-items: end;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.4fr 0.85fr;
+}
+
+.create-ai-hero-title {
+  font-family: var(--create-ai-display);
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  max-width: 16ch;
+}
+
+.create-ai-hero-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08rem;
+  margin: 0;
+  max-width: 38rem;
+}
+
+.create-ai-stat {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--create-ai-radius);
+  padding: 1.25rem 1.35rem;
+  backdrop-filter: blur(4px);
+}
+
+.create-ai-stat-value {
+  display: block;
+  font-family: var(--create-ai-display);
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.45rem;
+}
+
+.create-ai-stat-label {
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.create-ai-stat-source {
+  color: rgba(255, 255, 255, 0.55);
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+/* ---------- Challenge cards ---------- */
+.create-ai-challenges {
+  display: grid;
+  gap: 1.15rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.create-ai-challenge {
+  background: var(--create-ai-wash);
+  border-top: 3px solid var(--create-ai-cardinal);
+  border-radius: 0 0 var(--create-ai-radius) var(--create-ai-radius);
+  padding: 1.35rem 1.25rem 1.4rem;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.create-ai-challenge:hover {
+  background: var(--create-ai-wash-2);
+  transform: translateY(-2px);
+}
+
+.create-ai-challenge-num {
+  color: var(--create-ai-cardinal);
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+}
+
+.create-ai-challenge h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.55rem;
+}
+
+.create-ai-challenge p {
+  color: var(--create-ai-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.create-ai-challenge-icon {
+  display: block;
+  height: 2.25rem;
+  margin-bottom: 0.85rem;
+  width: 2.25rem;
+}
+
+.create-ai-challenge-icon svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/* ---------- Cascade / interconnection ---------- */
+.create-ai-cascade-wrap {
+  background: var(--create-ai-wash);
+  border-radius: var(--create-ai-radius);
+  overflow: hidden;
+  padding: 1.5rem 1rem 1.25rem;
+}
+
+.create-ai-cascade-svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 720px;
+  width: 100%;
+}
+
+.create-ai-cascade-svg .create-ai-node {
+  transition: transform 0.3s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.create-ai-cascade-wrap:hover .create-ai-node {
+  transform: scale(1.04);
+}
+
+.create-ai-cascade-svg .create-ai-link {
+  stroke-dasharray: 4 4;
+  animation: create-ai-dash 18s linear infinite;
+}
+
+.create-ai-cascade-caption {
+  color: var(--create-ai-muted);
+  font-size: 0.9rem;
+  margin: 1rem auto 0;
+  max-width: 40rem;
+  text-align: center;
+}
+
+@keyframes create-ai-dash {
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+/* ---------- Capability strip ---------- */
+.create-ai-steps {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.create-ai-steps::before {
+  background: var(--create-ai-line);
+  content: "";
+  height: 2px;
+  left: 10%;
+  position: absolute;
+  right: 10%;
+  top: 1.35rem;
+  z-index: 0;
+}
+
+.create-ai-step {
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.create-ai-step-marker {
+  background: var(--create-ai-white);
+  border: 2px solid var(--create-ai-cardinal);
+  border-radius: 50%;
+  color: var(--create-ai-cardinal);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  height: 2.7rem;
+  margin-bottom: 0.85rem;
+  width: 2.7rem;
+}
+
+.create-ai-step h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.create-ai-step p {
+  color: var(--create-ai-muted);
+  font-size: 0.92rem;
+  margin: 0 auto;
+  max-width: 18rem;
+}
+
+/* ---------- Why CREATE ---------- */
+.create-ai-why-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.create-ai-why-item {
+  background: var(--create-ai-white);
+  border: 1px solid var(--create-ai-line);
+  border-radius: var(--create-ai-radius);
+  padding: 1.15rem 1rem;
+}
+
+.create-ai-why-item strong {
+  color: var(--create-ai-cardinal);
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.create-ai-why-item p {
+  color: var(--create-ai-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.create-ai-note {
+  background: var(--create-ai-wash);
+  border-left: 3px solid var(--create-ai-cardinal);
+  color: var(--create-ai-muted);
+  font-size: 0.92rem;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1rem;
+}
+
+.create-ai-note p {
+  margin: 0;
+}
+
+/* ---------- Researchers ---------- */
+.create-ai-people {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.create-ai-person {
+  background: var(--create-ai-white);
+  border: 1px solid var(--create-ai-line);
+  border-radius: var(--create-ai-radius);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 72px 1fr;
+  padding: 1.15rem;
+}
+
+.create-ai-avatar {
+  align-items: center;
+  background: var(--create-ai-wash-2);
+  border-radius: 50%;
+  color: var(--create-ai-cardinal);
+  display: flex;
+  font-family: var(--create-ai-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  height: 72px;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  width: 72px;
+}
+
+.create-ai-person h3 {
+  font-size: 1.08rem;
+  margin: 0 0 0.2rem;
+}
+
+.create-ai-role {
+  color: var(--create-ai-cardinal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0 0 0.55rem;
+}
+
+.create-ai-blurb {
+  color: var(--create-ai-muted);
+  font-size: 0.94rem;
+  margin: 0 0 0.65rem;
+}
+
+.create-ai-person details {
+  margin: 0;
+}
+
+.create-ai-person summary {
+  color: var(--create-ai-cardinal);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  list-style: none;
+  user-select: none;
+  width: fit-content;
+}
+
+.create-ai-person summary::-webkit-details-marker {
+  display: none;
+}
+
+.create-ai-person summary::after {
+  content: " +";
+  font-weight: 700;
+}
+
+.create-ai-person details[open] summary::after {
+  content: " −";
+}
+
+.create-ai-full-bio {
+  color: var(--create-ai-ink);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--create-ai-line);
+}
+
+.create-ai-full-bio p {
+  margin: 0 0 0.75rem;
+}
+
+.create-ai-full-bio p:last-child {
+  margin-bottom: 0;
+}
+
+.create-ai-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.65rem;
+}
+
+.create-ai-tag {
+  background: var(--create-ai-wash);
+  border-radius: 2px;
+  color: var(--create-ai-stat);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.45rem;
+}
+
+/* ---------- References ---------- */
+.create-ai-refs details {
+  background: var(--create-ai-wash);
+  border-radius: var(--create-ai-radius);
+  padding: 0.25rem 0;
+}
+
+.create-ai-refs summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+  padding: 1rem 1.15rem;
+  user-select: none;
+}
+
+.create-ai-refs summary::-webkit-details-marker {
+  display: none;
+}
+
+.create-ai-refs summary::after {
+  color: var(--create-ai-cardinal);
+  content: "Expand";
+  float: right;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.create-ai-refs details[open] summary::after {
+  content: "Collapse";
+}
+
+.create-ai-ref-list {
+  border-top: 1px solid var(--create-ai-line);
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1.15rem 1.15rem;
+}
+
+.create-ai-ref-list li {
+  border-bottom: 1px solid var(--create-ai-line);
+  color: var(--create-ai-muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  padding: 0.7rem 0;
+}
+
+.create-ai-ref-list li:last-child {
+  border-bottom: 0;
+}
+
+/* ---------- Motion / a11y ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .create-ai-challenge,
+  .create-ai-cascade-svg .create-ai-node {
+    transition: none;
+  }
+
+  .create-ai-challenge:hover {
+    transform: none;
+  }
+
+  .create-ai-cascade-wrap:hover .create-ai-node {
+    transform: none;
+  }
+
+  .create-ai-cascade-svg .create-ai-link {
+    animation: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .create-ai-hero-grid,
+  .create-ai-challenges,
+  .create-ai-why-grid,
+  .create-ai-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .create-ai-steps::before {
+    display: none;
+  }
+
+  .create-ai-step {
+    display: grid;
+    gap: 0.85rem;
+    grid-template-columns: auto 1fr;
+    padding: 0.75rem 0;
+    text-align: left;
+  }
+
+  .create-ai-step-marker {
+    margin-bottom: 0;
+  }
+
+  .create-ai-people {
+    grid-template-columns: 1fr;
+  }
+
+  .create-ai-hero-title {
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .create-ai-person {
+    grid-template-columns: 1fr;
+  }
+
+  .create-ai-section {
+    padding: 2.25rem 0;
+  }
+}

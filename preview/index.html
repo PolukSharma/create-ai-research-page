@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CREATE Research on Artificial Intelligence — Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../wordpress/create-ai-research.css" />
+  <style>
+    /* Preview-only CREATE theme chrome — mirrors create.usc.edu subpages */
+    :root {
+      --create-cardinal: #990000;
+      --create-footer: #2d2d2d;
+      --create-ink: #1a1a1a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--create-ink);
+      font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #fff;
+    }
+    a { color: var(--create-cardinal); }
+    a:hover { color: #7a0000; }
+
+    .preview-note {
+      background: #fff8e6;
+      border-bottom: 1px solid #e6d9b8;
+      color: #5c4b1f;
+      font-size: 0.82rem;
+      padding: 0.55rem 1.25rem;
+      text-align: center;
+    }
+    .preview-note code {
+      background: rgba(0, 0, 0, 0.06);
+      border-radius: 3px;
+      font-size: 0.8em;
+      padding: 0.1em 0.35em;
+    }
+
+    /* --- Top nav (matches Academix/CREATE) --- */
+    .site-navbar {
+      align-items: center;
+      background: var(--create-cardinal);
+      display: flex;
+      justify-content: space-between;
+      min-height: 75px;
+      padding: 0.65rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-navbar .navbar-brand {
+      display: inline-block;
+      line-height: 0;
+    }
+    .site-navbar .navbar-brand img {
+      display: block;
+      height: 52px;
+      width: auto;
+    }
+    .site-navbar .nav-links {
+      display: flex;
+      gap: 1.35rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .site-navbar .nav-links a {
+      color: #fff;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .site-navbar .nav-links a:hover { opacity: 0.85; color: #fff; }
+    .nav-toggle {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      display: none;
+      padding: 0.35rem;
+    }
+    .nav-toggle span {
+      background: #fff;
+      display: block;
+      height: 2px;
+      margin: 5px 0;
+      width: 22px;
+    }
+
+    /* --- Page header banner (sabbi-page-header style) --- */
+    .sabbi-page-header {
+      background-color: #666;
+      background-image: url("https://create.usc.edu/wp-content/uploads/2020/05/USC2.jpg");
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 325px;
+      position: relative;
+    }
+    .sabbi-page-header::before {
+      background: rgba(40, 40, 40, 0.28);
+      content: "";
+      inset: 0;
+      position: absolute;
+    }
+    .header-title-block {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      z-index: 1;
+    }
+    .header-title-block .page-title {
+      background: var(--create-cardinal);
+      color: #fff;
+      display: inline-block;
+      font-family: Montserrat, "Open Sans", sans-serif;
+      font-size: clamp(1.05rem, 2.4vw, 1.375rem);
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0;
+      max-width: 100%;
+      padding: 0.65rem 1.55rem;
+      text-transform: uppercase;
+    }
+
+    /* --- Breadcrumb --- */
+    .auth-breadcrumb-wrap {
+      padding: 0.85rem 1rem 0.35rem;
+    }
+    .sabbi-breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .sabbi-breadcrumb li {
+      color: #666;
+      font-size: 0.875rem;
+    }
+    .sabbi-breadcrumb a {
+      color: var(--create-cardinal);
+      text-decoration: none;
+    }
+    .sabbi-breadcrumb .separator {
+      margin-left: 0.35rem;
+    }
+
+    .preview-status {
+      margin: 0;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+    .preview-status[data-error="true"] { color: var(--create-cardinal); }
+
+    /* --- Footer: same CREATE content, neater layout --- */
+    .site-footer {
+      background: var(--create-footer);
+      color: rgba(255, 255, 255, 0.82);
+      margin-top: 0;
+      padding: 2.75rem 1.5rem 2rem;
+    }
+    .site-footer a { color: #f0c7c7; text-decoration: none; }
+    .site-footer a:hover { color: #fff; text-decoration: underline; }
+    .footer-grid {
+      display: grid;
+      gap: 2rem 1.75rem;
+      grid-template-columns: 1.15fr 1fr 1fr 0.9fr;
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer-logo {
+      display: block;
+      height: auto;
+      max-width: 200px;
+      width: 100%;
+    }
+    .footer-partner {
+      display: block;
+      height: auto;
+      max-width: 220px;
+      opacity: 0.95;
+      width: 100%;
+    }
+    .footer-partner + .footer-partner,
+    .footer-col a + a {
+      margin-top: 0.15rem;
+    }
+    .footer-col h3 {
+      color: #fff;
+      font-family: Montserrat, "Open Sans", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.35rem;
+    }
+    .footer-col p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .footer-meta {
+      margin-top: 0.25rem;
+    }
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      list-style: none;
+      margin: 0.35rem 0 0;
+      padding: 0;
+    }
+    .footer-social a {
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      color: #fff;
+      display: inline-flex;
+      height: 2.5rem;
+      justify-content: center;
+      text-decoration: none;
+      width: 2.5rem;
+    }
+    .footer-social a svg {
+      display: block;
+      fill: currentColor;
+      height: 1.05rem;
+      width: 1.05rem;
+    }
+    .footer-social a:hover {
+      background: var(--create-cardinal);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .site-navbar .nav-links { display: none; }
+      .nav-toggle { display: block; }
+    }
+    @media (max-width: 560px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .sabbi-page-header { height: 240px; }
+      .header-title-block .page-title {
+        display: block;
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-note">
+    <strong>Live preview</strong> — theme header/footer mock CREATE subpages.
+    Edit <code>wordpress/content-fragment.html</code> + CSS, then refresh.
+  </div>
+
+  <nav class="site-navbar" aria-label="Primary">
+    <a class="navbar-brand" href="https://create.usc.edu/" title="CREATE">
+      <img src="https://create.usc.edu/wp-content/uploads/2020/04/logo.png" alt="CREATE — The Nation's First Homeland Security Center" width="185" height="49" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://create.usc.edu/about/">About</a></li>
+      <li><a href="https://create.usc.edu/research/">Research</a></li>
+      <li><a href="https://create.usc.edu/rd-transition/">R&amp;D Transition</a></li>
+      <li><a href="https://create.usc.edu/education/">Education</a></li>
+      <li><a href="https://create.usc.edu/media/">Media</a></li>
+    </ul>
+    <button class="nav-toggle" type="button" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <header
+    class="sabbi-page-header"
+    style="background-image: url(https://create.usc.edu/wp-content/uploads/2026/02/ai-machine-learning-enabling-computers-replicate-human-brain-functioning-self-learning-algorithms-based-data-mining-pattern-recognition-used-solve-complex-tasks-3d-render-animation-scaled.jpg);"
+    aria-label="Page header"
+  >
+    <div class="header-title-block">
+      <h1 class="page-title">CREATE Research on Artificial Intelligence</h1>
+    </div>
+  </header>
+
+  <div class="auth-breadcrumb-wrap">
+    <ul class="sabbi-breadcrumb">
+      <li><a href="https://create.usc.edu/">Home</a><span class="separator">/</span></li>
+      <li><span>CREATE Research on Artificial Intelligence</span></li>
+    </ul>
+  </div>
+
+  <main id="preview-main" class="preview-main" aria-live="polite">
+    <p class="preview-status">Loading content from <code>wordpress/content-fragment.html</code>…</p>
+  </main>
+
+  <footer id="colophon" class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img
+          class="footer-logo"
+          src="https://create.usc.edu/wp-content/uploads/2020/04/logo-300x79.png"
+          alt="CREATE"
+          width="200"
+          height="53"
+        />
+        <div class="footer-meta">
+          <h3>Address</h3>
+          <p>
+            University of Southern California<br />
+            240 GER<br />
+            Los Angeles, CA 90089
+          </p>
+        </div>
+        <div class="footer-meta">
+          <h3>Contact Information</h3>
+          <p>Email: <a href="mailto:rwhall@usc.edu">rwhall@usc.edu</a></p>
+        </div>
+        <p>
+          <a href="https://eeotix.usc.edu/notice-of-non-discrimination/">Notice of Non-Discrimination</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <a href="https://priceschool.usc.edu/">
+          <img
+            class="footer-partner"
+            src="https://create.usc.edu/wp-content/uploads/2020/04/Formal_SolPrice_GoldOnCard-300x68.png"
+            alt="USC Sol Price School of Public Policy"
+            width="220"
+            height="50"
+          />
+        </a>
+        <a href="https://viterbischool.usc.edu/">
+          <img
+            class="footer-partner"
+            src="https://create.usc.edu/wp-content/uploads/2020/04/Formal_Viterbi_GoldOnCard.png"
+            alt="USC Viterbi School of Engineering"
+            width="220"
+            height="59"
+          />
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <a href="https://www.usc.edu/">
+          <img
+            class="footer-partner"
+            src="https://create.usc.edu/wp-content/uploads/2020/04/PrimShield-Word_SmallUse_GoldOnCard-300x65.png"
+            alt="University of Southern California"
+            width="220"
+            height="48"
+          />
+        </a>
+        <a href="https://www.dhs.gov/science-and-technology/centers-excellence">
+          <img
+            class="footer-partner"
+            src="https://create.usc.edu/wp-content/uploads/2020/05/DHSlogo1.png"
+            alt="Department of Homeland Security Science and Technology"
+            width="220"
+            height="94"
+          />
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Social Links</h3>
+        <ul class="footer-social">
+          <li>
+            <a href="https://twitter.com/create_usc" target="_blank" rel="noopener noreferrer" title="Twitter" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.2 4.2 0 0 0 1.84-2.32 8.4 8.4 0 0 1-2.66 1.02 4.19 4.19 0 0 0-7.14 3.82A11.88 11.88 0 0 1 3.15 4.9a4.18 4.18 0 0 0 1.3 5.59 4.15 4.15 0 0 1-1.9-.52v.05a4.19 4.19 0 0 0 3.36 4.1 4.2 4.2 0 0 1-1.89.07 4.2 4.2 0 0 0 3.91 2.91A8.4 8.4 0 0 1 2 19.54a11.86 11.86 0 0 0 6.43 1.88c7.72 0 11.95-6.4 11.95-11.95v-.54A8.5 8.5 0 0 0 22.46 6z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/playlist?list=PL9QpO7x-TjRiOTM9lv-0DjYR5IRw4d9tM" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.8 15.5v-7l6.3 3.5-6.3 3.5z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/CREATE_USC/" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.2 2.3.4.6.2 1 .5 1.5 1 .4.4.7.9 1 1.5.2.4.4 1.1.4 2.3.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.9-.4 2.3-.2.6-.5 1-1 1.5-.4.4-.9.7-1.5 1-.4.2-1.1.4-2.3.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.2-2.3-.4-.6-.2-1-.5-1.5-1-.4-.4-.7-.9-1-1.5-.2-.4-.4-1.1-.4-2.3C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.9.4-2.3.2-.6.5-1 1-1.5.4-.4.9-.7 1.5-1 .4-.2 1.1-.4 2.3-.4C8.4 2.2 8.8 2.2 12 2.2zm0 2.2c-3.2 0-3.5 0-4.8.1-1.1 0-1.7.2-2.1.4-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.8s0 3.5.1 4.8c0 1.1.2 1.7.4 2.1.2.5.4.8.7 1.1.3.3.6.5 1.1.7.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.8.1s3.5 0 4.8-.1c1.1 0 1.7-.2 2.1-.4.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.8s0-3.5-.1-4.8c0-1.1-.2-1.7-.4-2.1-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.4-.2-1-.3-2.1-.4-1.3-.1-1.6-.1-4.8-.1zm0 3.7a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0 6.6a2.6 2.6 0 1 0 0-5.2 2.6 2.6 0 0 0 0 5.2zm5.1-6.8a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.flickr.com/photos/146037205@N07/" target="_blank" rel="noopener noreferrer" title="Flickr" aria-label="Flickr">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="12" r="4.2"/><circle cx="16.5" cy="12" r="4.2"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (async function loadFragment() {
+      const main = document.getElementById("preview-main");
+      try {
+        const res = await fetch("../wordpress/content-fragment.html", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const html = await res.text();
+        const doc = new DOMParser().parseFromString(html, "text/html");
+        doc.querySelectorAll('link[rel="stylesheet"]').forEach((el) => el.remove());
+        const page = doc.querySelector(".create-ai-page");
+        if (!page) throw new Error("Could not find .create-ai-page in content-fragment.html");
+        main.replaceChildren(page);
+      } catch (err) {
+        main.innerHTML =
+          '<p class="preview-status" data-error="true">Could not load content-fragment.html. ' +
+          "Serve the project over HTTP (not file://), then refresh.<br><small>" +
+          String(err.message || err) +
+          "</small></p>";
+      }
+    })();
+  </script>
+</body>
+</html>
