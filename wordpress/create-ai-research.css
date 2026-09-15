@@ -15,6 +15,12 @@
   --create-ai-radius: 4px;
   --create-ai-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --create-ai-display: "Georgia", "Times New Roman", Times, serif;
+  --create-ai-space-xs: 0.35rem;
+  --create-ai-space-sm: 0.6rem;
+  --create-ai-space-md: 1rem;
+  --create-ai-space-lg: 0.9rem;
+  --create-ai-space-xl: 1.75rem;
+  --create-ai-gap: 0.85rem;
 
   box-sizing: border-box;
   color: var(--create-ai-ink);
@@ -64,7 +70,7 @@
 }
 
 .create-ai-section {
-  padding: 3rem 0;
+  padding: var(--create-ai-space-xl) 0;
 }
 
 .create-ai-section + .create-ai-section {
@@ -76,7 +82,7 @@
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  margin: 0 0 0.65rem;
+  margin: 0 0 var(--create-ai-space-xs);
   text-transform: uppercase;
 }
 
@@ -85,21 +91,14 @@
   font-size: clamp(1.55rem, 2.4vw, 2rem);
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.75rem;
-}
-
-.create-ai-lede {
-  color: var(--create-ai-muted);
-  font-size: 1.05rem;
-  margin: 0 0 1.75rem;
-  max-width: 42rem;
+  margin: 0 0 var(--create-ai-space-lg);
 }
 
 /* ---------- Mission hero ---------- */
 .create-ai-hero {
   background: var(--create-ai-cardinal);
   color: var(--create-ai-white);
-  padding: 2.75rem 0 3rem;
+  padding: var(--create-ai-space-xl) 0;
 }
 
 .create-ai-hero-label {
@@ -107,7 +106,7 @@
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  margin: 0 0 0.75rem;
+  margin: 0 0 var(--create-ai-space-xs);
   text-transform: uppercase;
 }
 
@@ -123,7 +122,7 @@
 /* ---------- Challenge cards ---------- */
 .create-ai-challenges {
   display: grid;
-  gap: 1.15rem;
+  gap: var(--create-ai-gap);
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -131,7 +130,7 @@
   background: var(--create-ai-wash);
   border-top: 3px solid var(--create-ai-cardinal);
   border-radius: 0 0 var(--create-ai-radius) var(--create-ai-radius);
-  padding: 1.35rem 1.25rem 1.4rem;
+  padding: var(--create-ai-space-md);
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
@@ -180,7 +179,7 @@
 .create-ai-topics {
   align-items: start;
   display: grid;
-  gap: 1rem;
+  gap: var(--create-ai-gap);
   grid-template-columns: repeat(4, 1fr);
   list-style: none;
   margin: 0;
@@ -361,7 +360,7 @@
 /* ---------- Researchers ---------- */
 .create-ai-people {
   display: grid;
-  gap: 1rem;
+  gap: var(--create-ai-gap);
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -538,13 +537,16 @@
 .create-ai-contact-grid {
   align-items: start;
   display: grid;
-  gap: 2rem;
+  gap: var(--create-ai-space-lg);
   grid-template-columns: 1.4fr 0.8fr;
 }
 
-.create-ai-contact .create-ai-lede {
-  color: var(--create-ai-ink);
-  margin-bottom: 0.9rem;
+.create-ai-contact .create-ai-h2 {
+  margin-bottom: var(--create-ai-space-md);
+}
+
+.create-ai-contact p {
+  margin: 0 0 var(--create-ai-space-sm);
 }
 
 .create-ai-contact-support {
@@ -636,7 +638,8 @@
     grid-template-columns: 1fr;
   }
 
+  .create-ai-hero,
   .create-ai-section {
-    padding: 2.25rem 0;
+    padding: 1.4rem 0;
   }
 }
