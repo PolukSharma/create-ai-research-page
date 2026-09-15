@@ -95,6 +95,31 @@
   max-width: 42rem;
 }
 
+/* ---------- Mission hero ---------- */
+.create-ai-hero {
+  background: var(--create-ai-cardinal);
+  color: var(--create-ai-white);
+  padding: 2.75rem 0 3rem;
+}
+
+.create-ai-hero-label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.create-ai-hero-title {
+  font-family: var(--create-ai-display);
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0;
+  max-width: 34ch;
+}
+
 /* ---------- Challenge cards ---------- */
 .create-ai-challenges {
   display: grid;
@@ -149,38 +174,6 @@
   display: block;
   height: 100%;
   width: 100%;
-}
-
-.create-ai-challenge .create-ai-challenge-example {
-  border-top: 1px solid var(--create-ai-line);
-  color: var(--create-ai-ink);
-  font-size: 0.9rem;
-  margin-top: 0.9rem;
-  padding-top: 0.85rem;
-}
-
-.create-ai-challenge-example strong {
-  color: var(--create-ai-cardinal);
-}
-
-.create-ai-challenge .create-ai-challenge-people {
-  font-size: 0.85rem;
-  margin-top: 0.7rem;
-}
-
-.create-ai-challenge-people span {
-  color: var(--create-ai-muted);
-  font-weight: 600;
-}
-
-.create-ai-challenge-people a {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.create-ai-challenge-people a:hover,
-.create-ai-challenge-people a:focus-visible {
-  text-decoration: underline;
 }
 
 /* ---------- Research areas ---------- */

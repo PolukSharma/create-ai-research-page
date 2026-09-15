@@ -60,15 +60,15 @@ The preview shell loads `wordpress/content-fragment.html` live — edit that fil
 
 This is a subpage of create.usc.edu, so it stays AI-specific: no general CREATE background (the site's
 About page covers that). Plain language, present tense, and every framing section links down to the
-researchers and publications that back it up. The theme's page banner serves as the title; the fragment
-starts directly with the challenges.
+researchers and publications that back it up. The theme's page banner serves as the title.
 
-1. Three challenges — adversaries / defensive AI / reliability & control, each with an "In practice" example and researcher links  
-2. Research areas — eight concrete topics drawn from the fellows' work, each with an icon and a link to the fellow  
-3. How we work — simulate → build decision tools → evaluate, using real artifacts (Disaster World, E-CAT, Game of Hidden Rules)  
-4. All 8 Research Fellows — short blurbs, challenge tags linking back up, full bios on expand  
-5. Full AI reference list — collapsed by default; all links retained (libproxy URLs normalized to public DOIs where possible)  
-6. Contact — email, related CREATE pages, one-line support note
+1. Mission hero — solid cardinal band with a one-sentence mission statement  
+2. Three challenges — adversaries / defensive AI / reliability & control  
+3. Research areas — eight concrete topics drawn from the fellows' work, each with an icon and a link to the fellow  
+4. How we work — simulate → build decision tools → evaluate, using real artifacts (Disaster World, E-CAT, Game of Hidden Rules)  
+5. All 8 Research Fellows — short blurbs, challenge tags linking back up, full bios on expand  
+6. Full AI reference list — collapsed by default; all links retained (libproxy URLs normalized to public DOIs where possible)  
+7. Contact — email, related CREATE pages, one-line support note
 
 Removed from earlier drafts: the vision hero and IEA `$110B` stat, the "On this page" nav, the
 "Distinctive contribution" and "About CREATE" sections, the interconnection diagram, the "2028 Games" and
