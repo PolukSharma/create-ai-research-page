@@ -6,6 +6,10 @@ Drop-in redesign for CREATE’s public AI research page:
 
 Two files go on the live site. Everything else is only for preview.
 
+**Share this preview:** [https://create-ai-research-page.vercel.app](https://create-ai-research-page.vercel.app)
+
+Anyone with the link can open it. This GitHub repo stays private. It is not the live create.usc.edu page.
+
 ![Preview of the CREATE AI research page](docs/preview.png)
 
 ## What’s in this folder
